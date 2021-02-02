@@ -15,6 +15,7 @@ class _CategoryMainPageState extends State<CategoryMainPage> with AutomaticKeepA
   
   @override
   Widget build(BuildContext context) {
+    super.build(context);
     return Scaffold(
       body: Center(child: Text("类别"),),
     );

@@ -1,12 +1,19 @@
 import 'package:e_shop_flutter/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/foundation.dart';
+import 'package:e_shop_flutter/common/global.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
+import 'generated/l10n.dart';
+import 'index.dart';
+
+import 'package:provider/provider.dart';
 
 void main() {
     // 将debugPrint指定为同步打印数据 
   debugPrint = (String message, {int wrapWidth}) => debugPrintSynchronously(message, wrapWidth: wrapWidth);
-
-  runApp(MyApp());
+  
+  WidgetsFlutterBinding.ensureInitialized();
+  Global.init().then((value) => runApp(MyApp()));
 }
 
 class MyApp extends StatelessWidget {
@@ -30,16 +37,44 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'E-Shop',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-        visualDensity: VisualDensity.adaptivePlatformDensity,
-      ),
-      routes: routeList,
-      initialRoute: "/eshop_home_page",
-      onGenerateRoute: _onGenerateRoute,
-      onUnknownRoute: _onUnknownRoute,
-    );
+    return MultiProvider(
+      providers: [
+        ChangeNotifierProvider.value(value: UserProvider()),
+        ChangeNotifierProvider.value(value: LocaleProvider()),
+        ],
+      child: Consumer<LocaleProvider>(
+        builder: (BuildContext context, localeProvider, child) {
+          return MaterialApp(
+            theme: ThemeData(primaryColor: Colors.blue),
+            routes: routeList,
+            initialRoute: "/eshop_home_page",
+            onGenerateRoute: _onGenerateRoute,
+            onUnknownRoute: _onUnknownRoute,
+            locale: localeProvider.getLocal(),
+            supportedLocales: S.delegate.supportedLocales,
+            localizationsDelegates: [
+              S.delegate,
+              GlobalMaterialLocalizations.delegate,
+              GlobalWidgetsLocalizations.delegate,
+              GlobalCupertinoLocalizations.delegate
+            ],
+            localeResolutionCallback: 
+            (Locale _locale, Iterable<Locale> supportedLocales) {
+              if (localeProvider.getLocal() != null) {
+                return localeProvider.getLocal();
+              }else {
+                Locale locale;
+                if (supportedLocales.contains(_locale)) {
+                  locale = _locale;
+                }else {
+                  locale = Locale("en");
+                }
+                return locale;
+              }
+            },
+          );
+        },
+        ),
+      );
   }
 }

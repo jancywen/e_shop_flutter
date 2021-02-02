@@ -1,0 +1,18 @@
+{
+    "tab_bar_home": "Home",
+    "tab_bar_catetory": "Category",
+    "tab_bar_cart": "Cart",
+    "tab_bar_bl": "BL",
+    "tab_bar_me": "My",
+
+    "me_my_order": "My Order",
+    "me_all_orders": "All orders",
+    "me_after_sale" : "After salse",
+    "me_unpaid" : "Unpaid",
+    "me_undelivered": "Undelivered",
+    "me_unreceived": "Unreceived",
+    "me_wallet":"Wallet",
+    "me_about": "About Echain",
+    "me_loginSignup" : "Login/Sign up",
+    "me_setting" : "Setting"
+}

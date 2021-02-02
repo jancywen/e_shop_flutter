@@ -15,6 +15,7 @@ class _HomeMainPageState extends State<HomeMainPage> with AutomaticKeepAliveClie
   
   @override
   Widget build(BuildContext context) {
+    super.build(context);
     return Scaffold(
       body: Center(child: Text("首页"),),
     );

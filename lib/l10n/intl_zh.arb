@@ -1,0 +1,19 @@
+{
+    "tab_bar_home": "首页",
+    "tab_bar_catetory": "类别",
+    "tab_bar_cart": "购物车",
+    "tab_bar_bl": "提货单",
+    "tab_bar_me": "我的",
+
+
+    "me_my_order": "我的订单",
+    "me_all_orders": "全部订单",
+    "me_after_sale" : "售后",
+    "me_unpaid" : "待支付",
+    "me_undelivered": "待发货",
+    "me_unreceived": "待收货",
+    "me_wallet":"钱包",
+    "me_about": "关于Echain",
+    "me_loginSignup" : "登录/注册",
+    "me_setting": "系统设置"
+}

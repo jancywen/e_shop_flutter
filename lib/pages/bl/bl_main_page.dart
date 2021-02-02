@@ -14,6 +14,7 @@ class _BlMainPageState extends State<BlMainPage> with AutomaticKeepAliveClientMi
   
   @override
   Widget build(BuildContext context) {
+    super.build(context);
     return Scaffold(
       body: Center(child: Text("提货单"),),
     );

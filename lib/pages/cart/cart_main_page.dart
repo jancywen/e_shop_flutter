@@ -15,6 +15,7 @@ class _CartMainPageState extends State<CartMainPage> with AutomaticKeepAliveClie
   
   @override
   Widget build(BuildContext context) {
+    super.build(context);
     return Scaffold(
       body: Center(child: Text("购物车"),),
     );
