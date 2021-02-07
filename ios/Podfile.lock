@@ -1,25 +1,42 @@
 PODS:
+  - Alamofire (4.9.1)
   - Flutter (1.0.0)
   - FMDB (2.7.5):
     - FMDB/standard (= 2.7.5)
   - FMDB/standard (2.7.5)
+  - Moya (13.0.1):
+    - Moya/Core (= 13.0.1)
+  - Moya/Core (13.0.1):
+    - Alamofire (~> 4.1)
+    - Result (~> 4.1)
   - path_provider (0.0.1):
     - Flutter
+  - Result (4.1.0)
   - shared_preferences (0.0.1):
     - Flutter
   - sqflite (0.0.2):
     - Flutter
     - FMDB (>= 2.7.5)
+  - SwiftyJSON (5.0.0)
+  - webview_flutter (0.0.1):
+    - Flutter
 
 DEPENDENCIES:
   - Flutter (from `Flutter`)
+  - Moya
   - path_provider (from `.symlinks/plugins/path_provider/ios`)
   - shared_preferences (from `.symlinks/plugins/shared_preferences/ios`)
   - sqflite (from `.symlinks/plugins/sqflite/ios`)
+  - SwiftyJSON
+  - webview_flutter (from `.symlinks/plugins/webview_flutter/ios`)
 
 SPEC REPOS:
   trunk:
+    - Alamofire
     - FMDB
+    - Moya
+    - Result
+    - SwiftyJSON
 
 EXTERNAL SOURCES:
   Flutter:
@@ -30,14 +47,21 @@ EXTERNAL SOURCES:
     :path: ".symlinks/plugins/shared_preferences/ios"
   sqflite:
     :path: ".symlinks/plugins/sqflite/ios"
+  webview_flutter:
+    :path: ".symlinks/plugins/webview_flutter/ios"
 
 SPEC CHECKSUMS:
+  Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
   Flutter: 0e3d915762c693b495b44d77113d4970485de6ec
   FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
+  Moya: f4a4b80ff2f8a4ffc208dfb31cd91636622fee6e
   path_provider: abfe2b5c733d04e238b0d8691db0cfd63a27a93c
+  Result: bd966fac789cc6c1563440b348ab2598cc24d5c7
   shared_preferences: af6bfa751691cdc24be3045c43ec037377ada40d
   sqflite: 6d358c025f5b867b29ed92fc697fd34924e11904
+  SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
+  webview_flutter: d2b4d6c66968ad042ad94cbb791f5b72b4678a96
 
-PODFILE CHECKSUM: aafe91acc616949ddb318b77800a7f51bffa2a4c
+PODFILE CHECKSUM: f6b24e84c82f13d181eaaf0131f80768778cfefe
 
 COCOAPODS: 1.10.0

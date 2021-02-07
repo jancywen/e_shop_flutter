@@ -75,7 +75,7 @@ class _EShopHomePageState extends State<EShopHomePage> {
   Widget build(BuildContext context) {
     
     // 屏幕适配
-    ScreenUtil.init(context, designSize: Size(750, 1334), allowFontScaling: true);
+    ScreenUtil.init(context, designSize: Size(375, 667), allowFontScaling: true);
     
     return Scaffold(
       bottomNavigationBar: _appBar(context),

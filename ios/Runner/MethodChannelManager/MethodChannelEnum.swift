@@ -9,4 +9,7 @@ import Foundation
 
 enum MethodChannelType: String {
     case test = "testChannel"
+    case version = "getVersion"
+    case homeGoodsList = "homeGoodsList"
+    case homeHotSaleList = "homeHotSaleGoodsList"
 }

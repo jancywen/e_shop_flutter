@@ -1,0 +1,7 @@
+{
+    "activityList": "$[]activityModel",
+    "bannerList": "$[]bannerModel",
+    "brandList": "$[]brandModel",
+    "goodsRecommendList": "$[]goodsModel",
+    "hotCateList": "$[]categoryModel"
+}

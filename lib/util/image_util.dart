@@ -17,8 +17,8 @@ class EchainImage extends StatelessWidget {
       fit: BoxFit.cover,
       width: width,
       height: height,
-      placeholder: (context, url) => Image.asset(placeholder ?? "imgs/placeholder.png", ),
-      errorWidget: (context, url, _) => Image.asset(placeholder ?? "imgs/placeholder.png",),
+      placeholder: (context, url) => Image.asset(placeholder ?? "images/placeholder.png", ),
+      errorWidget: (context, url, _) => Image.asset(placeholder ?? "images/placeholder.png",),
       );
   }
 }

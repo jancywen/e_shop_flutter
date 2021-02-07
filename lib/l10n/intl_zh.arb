@@ -15,5 +15,10 @@
     "me_wallet":"钱包",
     "me_about": "关于Echain",
     "me_loginSignup" : "登录/注册",
-    "me_setting": "系统设置"
+    "me_setting": "系统设置",
+
+    "home_search": "搜索",
+    "home_recommend_brand_title": "推荐品牌",
+    "home_hot_goods_title": "热门商品",
+    "home_hot_sale_title": "热销商品"
 }

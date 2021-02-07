@@ -14,5 +14,10 @@
     "me_wallet":"Wallet",
     "me_about": "About Echain",
     "me_loginSignup" : "Login/Sign up",
-    "me_setting" : "Setting"
+    "me_setting" : "Setting",
+
+    "home_search": "search",
+    "home_recommend_brand_title": "Recommend brand",
+    "home_hot_goods_title": "Hot goods", 
+    "home_hot_sale_title": "Hot sale goods"
 }

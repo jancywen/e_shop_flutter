@@ -2,10 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:e_shop_flutter/models/index.dart';
 import 'dart:convert';
+import 'package:flutter/services.dart';
+
+const platform = MethodChannel("ESHOPCHANNEL");
 
 class Global {
   static SharedPreferences _preferences;
   static Profile profile = Profile();
+
 
   static Future init() async {
     _preferences = await SharedPreferences.getInstance();

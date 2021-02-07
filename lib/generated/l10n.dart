@@ -184,6 +184,46 @@ class S {
       args: [],
     );
   }
+
+  /// `search`
+  String get home_search {
+    return Intl.message(
+      'search',
+      name: 'home_search',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Recommend brand`
+  String get home_recommend_brand_title {
+    return Intl.message(
+      'Recommend brand',
+      name: 'home_recommend_brand_title',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Hot goods`
+  String get home_hot_goods_title {
+    return Intl.message(
+      'Hot goods',
+      name: 'home_hot_goods_title',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Hot sale goods`
+  String get home_hot_sale_title {
+    return Intl.message(
+      'Hot sale goods',
+      name: 'home_hot_sale_title',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

@@ -1,0 +1,14 @@
+{
+    "brandId": 0,
+    "brandLogo": "string",
+    "brandName": "string",
+    "fullStock": 0,
+    "id": 40,
+    "mainImg": "www.baidu.com",
+    "name": "测试商品名字",
+    "otherImgs": "www.baidu.com|www.google.com",
+    "publicOffering": 0,
+    "sanCode": "string",
+    "sanSufficient": true,
+    "skuImgs": "string"
+  }

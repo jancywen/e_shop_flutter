@@ -1,15 +1,18 @@
-import 'package:json_annotation/json_annotation.dart';
-
-part 'OrderStatistics.g.dart';
-
-@JsonSerializable()
 class OrderStatistics {
-    OrderStatistics();
+    OrderStatistics({this.obligationNum, this.waitReceiptNum, this.waitShipmentNum});
 
     num obligationNum;
     num waitShipmentNum;
     num waitReceiptNum;
     
-    factory OrderStatistics.fromJson(Map<String,dynamic> json) => _$OrderStatisticsFromJson(json);
-    Map<String, dynamic> toJson() => _$OrderStatisticsToJson(this);
+    factory OrderStatistics.fromJson(Map<String,dynamic> json) => OrderStatistics(
+      obligationNum: json["obligationNum"],
+      waitShipmentNum: json["waitShipmentNum"],
+      waitReceiptNum: json["waitReceiptNum"]
+    );
+    Map<String, dynamic> toJson() => <String, dynamic>{
+      'obligationNum': obligationNum,
+      'waitShipmentNum': waitShipmentNum,
+      'waitReceiptNum': waitReceiptNum
+    };
 }

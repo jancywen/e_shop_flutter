@@ -1,0 +1,13 @@
+{
+    "badge": "string",
+    "cateLevel": 0,
+    "children": "$[]categoryModel",
+    "id": 0,
+    "minProfitRate": "string",
+    "name": "string",
+    "nameZh": "string",
+    "parentId": 0,
+    "serviceTaxRate": "string",
+    "tag": "string",
+    "tokenCode": "string"
+  }

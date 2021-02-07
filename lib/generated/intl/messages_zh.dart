@@ -21,6 +21,10 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static _notInlinedMessages(_) => <String, Function> {
+    "home_hot_goods_title" : MessageLookupByLibrary.simpleMessage("热门商品"),
+    "home_hot_sale_title" : MessageLookupByLibrary.simpleMessage("热销商品"),
+    "home_recommend_brand_title" : MessageLookupByLibrary.simpleMessage("推荐品牌"),
+    "home_search" : MessageLookupByLibrary.simpleMessage("搜索"),
     "me_about" : MessageLookupByLibrary.simpleMessage("关于Echain"),
     "me_after_sale" : MessageLookupByLibrary.simpleMessage("售后"),
     "me_all_orders" : MessageLookupByLibrary.simpleMessage("全部订单"),

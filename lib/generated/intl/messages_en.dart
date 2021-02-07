@@ -21,6 +21,10 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static _notInlinedMessages(_) => <String, Function> {
+    "home_hot_goods_title" : MessageLookupByLibrary.simpleMessage("Hot goods"),
+    "home_hot_sale_title" : MessageLookupByLibrary.simpleMessage("Hot sale goods"),
+    "home_recommend_brand_title" : MessageLookupByLibrary.simpleMessage("Recommend brand"),
+    "home_search" : MessageLookupByLibrary.simpleMessage("search"),
     "me_about" : MessageLookupByLibrary.simpleMessage("About Echain"),
     "me_after_sale" : MessageLookupByLibrary.simpleMessage("After salse"),
     "me_all_orders" : MessageLookupByLibrary.simpleMessage("All orders"),

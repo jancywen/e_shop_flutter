@@ -1,0 +1,12 @@
+{
+    "createTime": 0,
+    "id": 0,
+    "imgUrl": "string",
+    "jumpParams": "string",
+    "jumpTo": "string",
+    "status": 0,
+    "sysType": 0,
+    "title": "string",
+    "type": 0,
+    "updateTime": 0
+  }

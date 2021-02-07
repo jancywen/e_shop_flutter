@@ -1,15 +1,22 @@
-import 'package:json_annotation/json_annotation.dart';
 import "user.dart";
-part 'Profile.g.dart';
 
-@JsonSerializable()
 class Profile {
-    Profile();
+    Profile({this.user, this.token, this.locale});
 
     User user;
     String token;
     String locale;
     
-    factory Profile.fromJson(Map<String,dynamic> json) => _$ProfileFromJson(json);
-    Map<String, dynamic> toJson() => _$ProfileToJson(this);
+    factory Profile.fromJson(Map<String,dynamic> json) => Profile(
+      user: json['user'] == null
+        ? null
+        : User.fromJson(json['user'] as Map<String, dynamic>),
+      token: json['token'],
+      locale: json['locale'],
+    );
+    Map<String, dynamic> toJson() => <String, dynamic>{
+      'user': user,
+      'token': token,
+      'locale': locale
+    };
 }

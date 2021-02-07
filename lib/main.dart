@@ -45,7 +45,16 @@ class MyApp extends StatelessWidget {
       child: Consumer<LocaleProvider>(
         builder: (BuildContext context, localeProvider, child) {
           return MaterialApp(
-            theme: ThemeData(primaryColor: Colors.blue),
+            theme: ThemeData(
+              primaryColor: Color(0xff3e5982),
+              scaffoldBackgroundColor: Color(0xfff7f7f8),
+              textTheme: TextTheme(
+                  headline1: TextStyle(color: Color(0xff28333d), fontSize: 18, fontWeight: FontWeight.w500), 
+                  headline2: TextStyle(color: Color(0xff28333d), fontSize: 13, fontWeight: FontWeight.w500),
+                  headline3: TextStyle(color: Color(0xffaaabac), fontSize: 15), // search placeholder
+                  headline4: TextStyle(color: Color(0xff2e5982), fontSize: 19, fontWeight: FontWeight.w500)
+                )
+              ),
             routes: routeList,
             initialRoute: "/eshop_home_page",
             onGenerateRoute: _onGenerateRoute,
