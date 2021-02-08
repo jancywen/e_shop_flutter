@@ -22,6 +22,15 @@ class _CategoryMainPageState extends State<CategoryMainPage> with AutomaticKeepA
 
   void _onTapCategory(CategoryModel catetory) {
     print("onTapCategory: ${catetory.id}");
+
+  List<List<num>> sourcedata = [[1,2], [34, 56]];
+    var some = sourcedata.reduce((value, element) { 
+      List<num> temp = List.from(value);
+      temp.addAll(element);
+      return temp;
+      });
+
+      print(some);
   }
 
   @override
@@ -63,13 +72,16 @@ class _CategoryMainPageState extends State<CategoryMainPage> with AutomaticKeepA
                 flex: 5,
                 child: Container(
                   color: Colors.white,
-                  padding: EdgeInsets.only(top: 15, left: 15,right: 10),
+                  padding: EdgeInsets.only(left: 15,right: 10),
                   child: CustomScrollView(slivers: 
                     provider.subList
                     .map((category) {
                       return category.children == null 
-                      ? Container()
-                      : SliverGrid(
+                      ? [SliverToBoxAdapter(child:Container())]
+                      : [SliverToBoxAdapter(
+                        child: Padding(padding: EdgeInsets.only(top: 15, bottom: 10), 
+                        child: Text(category.name, style: Theme.of(context).textTheme.headline1,),),),
+                        SliverGrid(
                         gridDelegate: new SliverGridDelegateWithFixedCrossAxisCount(
                           crossAxisCount: 3,
                           mainAxisSpacing: 10,
@@ -83,17 +95,24 @@ class _CategoryMainPageState extends State<CategoryMainPage> with AutomaticKeepA
                                 return GestureDetector(
                                   onTap: () => _onTapCategory(model),
                                   child: Column(
+                                    mainAxisAlignment: MainAxisAlignment.spaceAround,
                                     children:[
                                       ClipRRect(
                                         borderRadius: BorderRadius.circular(8),
                                         child: EchainImage(url: model.badge, height: 75,),
                                       ),
-                                      Text(model.name, maxLines: 1,)
+                                      Text(model.name, style: Theme.of(context).textTheme.headline2, maxLines: 1,)
                                   ])
                                 );
                             }, childCount: category.children.length),
-                        );
-                    },).toList())
+                        ),
+                        SliverToBoxAdapter(child: Container(color: Color(0xff6d747b), height: 0.2,))
+                        ];
+                    },).reduce((value, element) {
+                      List<RenderObjectWidget> temp = List.from(value);
+                      temp.addAll(element);
+                      return temp;
+                    }).toList())
                 )
               )
             ],)
