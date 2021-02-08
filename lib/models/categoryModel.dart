@@ -31,8 +31,8 @@ class CategoryModel {
     String tokenCode;
     
     factory CategoryModel.fromJson(Map<dynamic,dynamic> json) => CategoryModel(
-      badge: json[""],
-      cateLevel: json[""],
+      badge: json["badge"],
+      cateLevel: json["cateLevel"],
       children: json["children"] == null ? null :
       List<CategoryModel>.from(json["children"].map((x) => CategoryModel.fromJson(x))),
       id: json["id"],

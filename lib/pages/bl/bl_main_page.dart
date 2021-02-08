@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:e_shop_flutter/widget/search_bar_widget.dart';
 
 class BlMainPage extends StatefulWidget {
   @override
@@ -12,11 +13,21 @@ class _BlMainPageState extends State<BlMainPage> with AutomaticKeepAliveClientMi
   bool get wantKeepAlive => true;
 
   
+  void _onTapSearch() {
+
+  }
+
+
   @override
   Widget build(BuildContext context) {
     super.build(context);
     return Scaffold(
-      body: Center(child: Text("提货单"),),
+      body: Column(
+        children: [
+          SearchBarWidget(onTap: _onTapSearch,),
+          
+        ]
+      ),
     );
   }
 }

@@ -4,6 +4,9 @@ import 'package:e_shop_flutter/generated/l10n.dart';
 
 
 class SearchBarWidget extends StatelessWidget {
+  final Function onTap;
+  SearchBarWidget({Key key, this.onTap});
+  
   @override
   Widget build(BuildContext context) {
 

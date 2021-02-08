@@ -7,7 +7,7 @@ import 'package:provider/provider.dart';
 import 'package:flutter/foundation.dart';
 import 'package:pull_to_refresh/pull_to_refresh.dart';
 
-import 'widget/search_bar_widget.dart';
+import '../../widget/search_bar_widget.dart';
 import 'package:e_shop_flutter/providers/home_main_provider.dart';
 import 'package:e_shop_flutter/util/image_util.dart';
 import 'package:e_shop_flutter/generated/l10n.dart';
@@ -50,6 +50,10 @@ class _HomeMainPageState extends State<HomeMainPage> with AutomaticKeepAliveClie
       );
   }
 
+  // 搜索
+  void _onTapSearch() {
+
+  }
   // 点击类别
   void _onTapCategory(CategoryModel model) {
     debugPrint("category Id: ${model.id}");
@@ -83,7 +87,7 @@ class _HomeMainPageState extends State<HomeMainPage> with AutomaticKeepAliveClie
           maxHeight: ScreenUtil().statusBarHeight + 50+30,
           child: Column(
             children: [
-              SearchBarWidget(),
+              SearchBarWidget(onTap: _onTapSearch),
               Expanded(
                 child: Container(
                   color: Theme.of(context).primaryColor,

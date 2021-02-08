@@ -27,10 +27,11 @@ class MethodChannelManager {
             testChannel(result: result, arguments: call.arguments)
         case .version:
             getVersion(result: result)
-        case .homeGoodsList:
-            getHomeGoodsList(param: call.arguments, result: result)
-        case .homeHotSaleList:
-            getHomeHotSaleGoodsList(param: call.arguments, result: result)
+        case .homeGoodsList,
+             .homeHotSaleList,
+             .categoryTopList,
+             .categorySublist:
+            normalNetwork(channel: type, param: call.arguments, result: result)
         }
     }
     
@@ -48,28 +49,26 @@ class MethodChannelManager {
         result(version)
     }
     
-    /// 请求商品列表
-    private func getHomeGoodsList(param: Any?, result:@escaping FlutterResult) {
+    private func normalNetwork(channel: MethodChannelType, param: Any?, result: @escaping FlutterResult) {
         guard let p = param as? [String: Any] else {
             result(FlutterError(code: "error", message: "入参错误", details: nil))
             return
         }
-        Provider.convenience(target: MultiTarget(HomeAPI.goodsList(p))) { res in
-            guard let r = res else {
-                result(FlutterError(code: "error", message: "请求失败", details: nil))
-                return
-            }
-            result(r)
-        }
-    }
-    
-    /// 首页 热销商品
-    private func getHomeHotSaleGoodsList(param: Any?, result: @escaping FlutterResult) {
-        guard let p = param as? [String: Any] else {
+        var target: TargetType
+        switch channel {
+        case .homeGoodsList:
+            target = HomeAPI.goodsList(p)
+        case .homeHotSaleList:
+            target = HomeAPI.hotSaleList(p)
+        case .categoryTopList:
+            target = CategoryAPI.topList(p)
+        case .categorySublist:
+            target = CategoryAPI.subList(p)
+        default:
             result(FlutterError(code: "error", message: "入参错误", details: nil))
             return
         }
-        Provider.convenience(target: MultiTarget(HomeAPI.hotSaleList(p))) { res in
+        Provider.convenience(target: MultiTarget(target)) { res in
             guard let r = res else {
                 result(FlutterError(code: "error", message: "请求失败", details: nil))
                 return

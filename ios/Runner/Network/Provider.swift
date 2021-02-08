@@ -30,7 +30,7 @@ extension TargetType {
     }
     // 请求头
     var headers: [String: String]? {
-        return nil
+        return ["currency": "39", "language": "19", "country": "45"]
     }
     
 }
@@ -56,16 +56,16 @@ extension MoyaProvider {
     
     @discardableResult
     open func convenience(target: Target,showHud: Bool = false, completion: @escaping (Any?) -> Void ) -> Cancellable? {
-        
         return request(target) { (result) in
             switch result {
             case .success(let response):
-                
                 if response.statusCode == 200 {
                     if let some = try? response.mapJSON() {
                         completion(some)
+                        return
                     }
                 }
+                completion(nil)
             case .failure(_):
                 completion(nil)
             }

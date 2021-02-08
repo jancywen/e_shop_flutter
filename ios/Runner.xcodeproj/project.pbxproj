@@ -14,12 +14,12 @@
 		97C146FE1CF9000F007C117D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97C146FD1CF9000F007C117D /* Assets.xcassets */; };
 		97C147011CF9000F007C117D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97C146FF1CF9000F007C117D /* LaunchScreen.storyboard */; };
 		CD6B7BC8D48056705106581F /* Pods_Runner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48B9DB23C900558A97FDAEE3 /* Pods_Runner.framework */; };
+		E4AD1B9F25CFEF9800A178AE /* CategoryAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4AD1B9E25CFEF9800A178AE /* CategoryAPI.swift */; };
 		E4DAD68325CBCBD500F712B6 /* MethodChannelManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DAD68225CBCBD500F712B6 /* MethodChannelManager.swift */; };
 		E4DAD68525CBCEE300F712B6 /* MethodChannelEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DAD68425CBCEE300F712B6 /* MethodChannelEnum.swift */; };
 		E4DAD69225CBE20F00F712B6 /* HomeAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DAD69125CBE20F00F712B6 /* HomeAPI.swift */; };
 		E4DAD69425CBE24100F712B6 /* Provider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DAD69325CBE24100F712B6 /* Provider.swift */; };
 		E4DAD69725CBE84300F712B6 /* LogPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DAD69625CBE84300F712B6 /* LogPlugin.swift */; };
-		E4DAD6A325CBEB1600F712B6 /* HomeServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DAD6A225CBEB1600F712B6 /* HomeServer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -53,12 +53,12 @@
 		97C146FD1CF9000F007C117D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		97C147001CF9000F007C117D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		97C147021CF9000F007C117D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E4AD1B9E25CFEF9800A178AE /* CategoryAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryAPI.swift; sourceTree = "<group>"; };
 		E4DAD68225CBCBD500F712B6 /* MethodChannelManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MethodChannelManager.swift; sourceTree = "<group>"; };
 		E4DAD68425CBCEE300F712B6 /* MethodChannelEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MethodChannelEnum.swift; sourceTree = "<group>"; };
 		E4DAD69125CBE20F00F712B6 /* HomeAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeAPI.swift; sourceTree = "<group>"; };
 		E4DAD69325CBE24100F712B6 /* Provider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Provider.swift; sourceTree = "<group>"; };
 		E4DAD69625CBE84300F712B6 /* LogPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogPlugin.swift; sourceTree = "<group>"; };
-		E4DAD6A225CBEB1600F712B6 /* HomeServer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeServer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,7 +153,7 @@
 			isa = PBXGroup;
 			children = (
 				E4DAD69125CBE20F00F712B6 /* HomeAPI.swift */,
-				E4DAD6A225CBEB1600F712B6 /* HomeServer.swift */,
+				E4AD1B9E25CFEF9800A178AE /* CategoryAPI.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -325,9 +325,9 @@
 				E4DAD68325CBCBD500F712B6 /* MethodChannelManager.swift in Sources */,
 				E4DAD68525CBCEE300F712B6 /* MethodChannelEnum.swift in Sources */,
 				E4DAD69225CBE20F00F712B6 /* HomeAPI.swift in Sources */,
+				E4AD1B9F25CFEF9800A178AE /* CategoryAPI.swift in Sources */,
 				74858FAF1ED2DC5600515810 /* AppDelegate.swift in Sources */,
 				E4DAD69425CBE24100F712B6 /* Provider.swift in Sources */,
-				E4DAD6A325CBEB1600F712B6 /* HomeServer.swift in Sources */,
 				1498D2341E8E89220040F4C2 /* GeneratedPluginRegistrant.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

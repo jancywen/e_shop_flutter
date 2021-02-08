@@ -2,7 +2,6 @@ import 'package:pull_to_refresh/pull_to_refresh.dart';
 import 'package:flutter/material.dart';
 import 'package:e_shop_flutter/models/index.dart';
 import 'package:e_shop_flutter/common/global.dart';
-import 'dart:convert';
 
 class HomeMainProvider with ChangeNotifier {
   List<BannerModel> _bannerList = [];
